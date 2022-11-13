@@ -16,22 +16,22 @@ namespace WindowsAppPubs.Models
 
         [Key]
         [StringLength(11)]
-        public string AuId { get; set; }
+        public string au_id { get; set; }
 
         [Required]
         [StringLength(40)]
-        public string AuLname { get; set; }
+        public string au_lname { get; set; }
 
         [Required]
         [StringLength(20)]
-        public string AuFname { get; set; }
+        public string au_fname { get; set; }
 
         [Required]
         [StringLength(12)]
         public string Phone { get; set; }
 
         [StringLength(40)]
-        public string Address { get; set; }
+        public string address { get; set; }
 
         [StringLength(20)]
         public string City { get; set; }

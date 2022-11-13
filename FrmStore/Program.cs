@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsAppPubs
+namespace FrmStore
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace WindowsAppPubs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAuthor());
+            Application.Run(new Form1());
         }
     }
 }

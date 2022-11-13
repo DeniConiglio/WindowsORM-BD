@@ -15,15 +15,15 @@ namespace WindowsAppPubs.Models
         }
 
         [Key]
-        public short JobId { get; set; }
+        public short job_id { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string JobDesc { get; set; }
+        public string job_desc { get; set; }
 
-        public byte MinLvl { get; set; }
+        public byte min_lvl { get; set; }
 
-        public byte MaxLvl { get; set; }
+        public byte max_lvl { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employees { get; set; }

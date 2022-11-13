@@ -11,28 +11,28 @@ namespace WindowsAppPubs.Models
     {
         [Key]
         [StringLength(9)]
-        public string EmpId { get; set; }
+        public string emp_id { get; set; }
 
         [Required]
         [StringLength(20)]
-        public string Fname { get; set; }
+        public string fname { get; set; }
 
         [StringLength(1)]
-        public string Minit { get; set; }
+        public string minit { get; set; }
 
         [Required]
         [StringLength(30)]
-        public string Lname { get; set; }
+        public string lname { get; set; }
 
-        public short JobId { get; set; }
+        public short job_id { get; set; }
 
-        public byte? JobLvl { get; set; }
+        public byte? job_lbl { get; set; }
 
         [Required]
         [StringLength(4)]
-        public string PubId { get; set; }
+        public string pub_id { get; set; }
 
-        public DateTime HireDate { get; set; }
+        public DateTime hiredata { get; set; }
 
         public virtual Job Job { get; set; }
 

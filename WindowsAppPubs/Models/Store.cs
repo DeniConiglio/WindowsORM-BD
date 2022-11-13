@@ -17,13 +17,13 @@ namespace WindowsAppPubs.Models
 
         [Key]
         [StringLength(4)]
-        public string StorId { get; set; }
+        public string stor_id { get; set; }
 
         [StringLength(40)]
-        public string StorName { get; set; }
+        public string stor_name { get; set; }
 
         [StringLength(40)]
-        public string StorAddress { get; set; }
+        public string stor_address { get; set; }
 
         [StringLength(20)]
         public string City { get; set; }

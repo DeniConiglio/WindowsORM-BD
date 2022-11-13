@@ -10,6 +10,7 @@ namespace WindowsAppPubs.Models
         public PubsContext()
             : base("name=PubsContext1")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Author> Authors { get; set; }
@@ -27,15 +28,15 @@ namespace WindowsAppPubs.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Author>()
-                .Property(e => e.AuId)
+                .Property(e => e.au_id)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Author>()
-                .Property(e => e.AuLname)
+                .Property(e => e.au_lname)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Author>()
-                .Property(e => e.AuFname)
+                .Property(e => e.au_fname)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Author>()
@@ -44,7 +45,7 @@ namespace WindowsAppPubs.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Author>()
-                .Property(e => e.Address)
+                .Property(e => e.address)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Author>()
@@ -67,30 +68,30 @@ namespace WindowsAppPubs.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Employee>()
-                .Property(e => e.EmpId)
+                .Property(e => e.emp_id)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<Employee>()
-                .Property(e => e.Fname)
+                .Property(e => e.fname)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Employee>()
-                .Property(e => e.Minit)
+                .Property(e => e.minit)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<Employee>()
-                .Property(e => e.Lname)
+                .Property(e => e.lname)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Employee>()
-                .Property(e => e.PubId)
+                .Property(e => e.pub_id)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<Job>()
-                .Property(e => e.JobDesc)
+                .Property(e => e.job_desc)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Job>()
@@ -108,12 +109,12 @@ namespace WindowsAppPubs.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Publisher>()
-                .Property(e => e.PubId)
+                .Property(e => e.pub_id)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<Publisher>()
-                .Property(e => e.PubName)
+                .Property(e => e.pub_name)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Publisher>()
@@ -139,7 +140,7 @@ namespace WindowsAppPubs.Models
                 .WithRequired(e => e.Publisher);
 
             modelBuilder.Entity<Sale>()
-                .Property(e => e.StorId)
+                .Property(e => e.stor_id)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -156,16 +157,16 @@ namespace WindowsAppPubs.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Store>()
-                .Property(e => e.StorId)
+                .Property(e => e.stor_id)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<Store>()
-                .Property(e => e.StorName)
+                .Property(e => e.stor_name)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Store>()
-                .Property(e => e.StorAddress)
+                .Property(e => e.stor_address)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Store>()

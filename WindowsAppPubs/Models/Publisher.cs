@@ -17,10 +17,10 @@ namespace WindowsAppPubs.Models
 
         [Key]
         [StringLength(4)]
-        public string PubId { get; set; }
+        public string pub_id { get; set; }
 
         [StringLength(40)]
-        public string PubName { get; set; }
+        public string pub_name { get; set; }
 
         [StringLength(20)]
         public string City { get; set; }

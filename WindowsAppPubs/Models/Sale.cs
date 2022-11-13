@@ -11,7 +11,7 @@ namespace WindowsAppPubs.Models
         [Key]
         [Column(Order = 0)]
         [StringLength(4)]
-        public string StorId { get; set; }
+        public string stor_id { get; set; }
 
         [Key]
         [Column(Order = 1)]
